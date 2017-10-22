@@ -14,36 +14,7 @@ requirement2classes['R1A'] = JSON.parse(readTextFile("../requirement2classes/r1a
 requirement2classes['R1B'] = JSON.parse(readTextFile("../requirement2classes/r1b.txt"));
 requirement2classes['SBS'] = JSON.parse(readTextFile("../requirement2classes/sbs.txt"));
 
-
-var dept2acro = readTextFile("../full_to_acr.txt");
-dept2acro = JSON.parse(dept2acro);
-
-var acro2class = {};
-acro2class['A'] = JSON.parse(readTextFile("../acronym2classes/A.txt"));
-acro2class['B'] = JSON.parse(readTextFile("../acronym2classes/B.txt"));
-acro2class['C'] = JSON.parse(readTextFile("../acronym2classes/C.txt"));
-acro2class['D'] = JSON.parse(readTextFile("../acronym2classes/D.txt"));
-acro2class['E'] = JSON.parse(readTextFile("../acronym2classes/E.txt"));
-acro2class['F'] = JSON.parse(readTextFile("../acronym2classes/F.txt"));
-acro2class['G'] = JSON.parse(readTextFile("../acronym2classes/G.txt"));
-acro2class['H'] = JSON.parse(readTextFile("../acronym2classes/H.txt"));
-acro2class['I'] = JSON.parse(readTextFile("../acronym2classes/I.txt"));
-acro2class['J'] = JSON.parse(readTextFile("../acronym2classes/J.txt"));
-acro2class['K'] = JSON.parse(readTextFile("../acronym2classes/K.txt"));
-acro2class['L'] = JSON.parse(readTextFile("../acronym2classes/L.txt"));
-acro2class['M'] = JSON.parse(readTextFile("../acronym2classes/M.txt"));
-acro2class['N'] = JSON.parse(readTextFile("../acronym2classes/N.txt"));
-acro2class['O'] = JSON.parse(readTextFile("../acronym2classes/O.txt"));
-acro2class['P'] = JSON.parse(readTextFile("../acronym2classes/P.txt"));
-acro2class['R'] = JSON.parse(readTextFile("../acronym2classes/R.txt"));
-acro2class['S'] = JSON.parse(readTextFile("../acronym2classes/S.txt"));
-acro2class['T'] = JSON.parse(readTextFile("../acronym2classes/T.txt"));
-acro2class['U'] = JSON.parse(readTextFile("../acronym2classes/U.txt"));
-acro2class['V'] = JSON.parse(readTextFile("../acronym2classes/V.txt"));
-acro2class['Y'] = JSON.parse(readTextFile("../acronym2classes/Y.txt"));
-
-// var classList = readTextFile("../class_list.txt");
-// classList = JSON.parse(classList);
+var html = readTextFile("../html_block.txt");
 
 function readTextFile(file) {
 	var rawFile1 = new XMLHttpRequest();
@@ -59,12 +30,10 @@ function readTextFile(file) {
 	return rawFile1.responseText;
 }
 
-var html = readTextFile("../html_block.txt");
 
 function loadClasses() {
 	document.getElementById('courses').innerHTML = html;
 }
-
 
 // animates tile once requirement is toggles
 function anim(req){
